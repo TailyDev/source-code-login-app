@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Register - Detail Proyek | TailyDev ID</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .image-gallery img:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  >
+    <!-- Project Detail Hero -->
+    <section class="py-20 px-6 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto">
+        <div
+          class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden"
+        >
+          <div class="overflow-hidden">
+            <div class="w-full h-full flex items-center justify-center">
+              <img
+                src="galeri-projek/login-app.png"
+                alt="landing-page-modern"
+              />
+            </div>
+          </div>
+
+          <div class="p-8 md:p-12">
+            <div class="flex flex-wrap gap-3 mb-8">
+              <span
+                class="px-3 py-1 rounded-full text-sm font-medium bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300"
+                >HTML</span
+              >
+              <span
+                class="px-3 py-1 rounded-full text-sm font-medium bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300"
+                >Tailwind CSS</span
+              >
+              <span
+                class="px-3 py-1 rounded-full text-sm font-medium bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300"
+                >JavaScript</span
+              >
+              <span
+                class="px-3 py-1 rounded-full text-sm font-medium bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300"
+                >PHP</span
+              >
+              <span
+                class="px-3 py-1 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300"
+                >Login & Register Page</span
+              >
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold mb-6">Tentang Proyek</h2>
+                <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                  <p>
+                    LoginApp adalah sebuah sistem otentikasi pengguna berbasis
+                    web yang dibangun menggunakan HTML, TailwindCSS v4, PHP, dan
+                    MySQL. Proyek ini mencakup halaman login, pendaftaran
+                    pengguna baru, validasi akun, serta manajemen user berbasis
+                    peran (admin dan user biasa). Tujuan utamanya adalah
+                    menyediakan mekanisme login yang aman, sistem pendaftaran
+                    terintegrasi dengan database, dan akses yang disesuaikan
+                    berdasarkan level user.
+                  </p>
+                  <h3 class="text-2xl font-bold mt-8 mb-4">Fitur Utama</h3>
+                  <ul class="space-y-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-check text-primary-600 dark:text-primary-400 mr-2"
+                      ></i
+                      ><span class="font-bold text-lg"
+                        >Form Login Dinamis + Feedback</span
+                      >
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li>
+                          Validasi email & password dari database MySQL via
+                          proses/login.php.
+                        </li>
+                        <li>Notifikasi (toast) jika login berhasil/gagal.</li>
+                        <li>
+                          Tombol "Lupa Password" menuju halaman kontak admin via
+                          WhatsApp.
+                        </li>
+                        <li>
+                          Akses dibagi dua:
+                          <ul class="list-disc pl-5 space-y-2">
+                            <li>admin@gmail.com ke /dashboard/</li>
+                            <li>Email lainnya ke /landing-page/</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="space-y-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-check text-primary-600 dark:text-primary-400 mr-2"
+                      ></i
+                      ><span class="font-bold text-lg"
+                        >Form Register dengan Validasi & Konfirmasi Password
+                      </span>
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li>
+                          Validasi kecocokan password dan konfirmasi password di
+                          sisi client.
+                        </li>
+
+                        <li>
+                          Cek apakah email sudah terdaftar (via
+                          proses/cek_email.php).
+                        </li>
+                        <li>
+                          Data disimpan ke MySQL melalui proses/register.php.
+                        </li>
+                        <li>
+                          Notifikasi toast saat berhasil mendaftar atau jika
+                          gagal.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="space-y-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-check text-primary-600 dark:text-primary-400 mr-2"
+                      ></i
+                      ><span class="font-bold text-lg"
+                        >Dashboard Admin (Role-Based Access)</span
+                      >
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li>Akses khusus untuk admin.</li>
+                        <li>
+                          Menampilkan data user (kemungkinan pakai
+                          hapus_user.php untuk manajemen akun).
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="space-y-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-check text-primary-600 dark:text-primary-400 mr-2"
+                      ></i
+                      ><span class="font-bold text-lg">
+                        Struktur Folder Modular & Rapi</span
+                      >
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li>
+                          Folder proses/ untuk semua logic backend (login,
+                          register, logout, dll).
+                        </li>
+                        <li>Halaman landing-page/ untuk pengguna biasa.</li>
+                        <li>Folder img/ untuk aset visual.</li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="space-y-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-check text-primary-600 dark:text-primary-400 mr-2"
+                      ></i
+                      ><span class="font-bold text-lg">Fitur Tambahan</span>
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li>Validasi frontend menggunakan JavaScript.</li>
+                        <li>Feather Icons untuk tampilan modern.</li>
+                        <li>Toast notifikasi dengan animasi.</li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="space-y-2">
+                    <li>
+                      <i
+                        class="fa-solid fa-check text-primary-600 dark:text-primary-400 mr-2"
+                      ></i
+                      ><span class="font-bold text-lg"
+                        >Cocok digunakan untuk:</span
+                      >
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li>Sistem login admin dan pengguna biasa.</li>
+                        <li>Website internal perusahaan.</li>
+                        <li>Sistem registrasi event/sekolah/komunitas</li>
+                        <li>
+                          Template dasar untuk proyek berbasis user management
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="lg:col-span-1">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                  <h3 class="text-xl font-bold mb-4">Informasi Proyek</h3>
+                  <div class="space-y-4">
+                    <div>
+                      <h4
+                        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                      >
+                        Jenis Proyek
+                      </h4>
+                      <p>Login & Register Page</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-8">
+                    <h3 class="text-xl font-bold mb-4">Teknologi</h3>
+                    <div class="space-y-2">
+                      <div class="flex items-center">
+                        <i class="fa-brands fa-html5 text-orange-500 w-6"></i>
+                        <span class="ml-2">HTML5</span>
+                      </div>
+                      <div class="flex items-center">
+                        <i class="fa-brands fa-css3-alt text-blue-500 w-6"></i>
+                        <span class="ml-2">Tailwind CSS</span>
+                      </div>
+                      <div class="flex items-center">
+                        <i class="fa-brands fa-js text-yellow-500 w-6"></i>
+                        <span class="ml-2">JavaScript</span>
+                      </div>
+                      <div class="flex items-center">
+                        <i class="fa-brands fa-php text-indigo-500 w-6"></i>
+                        <span class="ml-2">PHP 8.1</span>
+                      </div>
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-database text-green-500 w-6"></i>
+                        <span class="ml-2">MySQL</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-8">
+                    <a
+                      href="https://lynk.id/pesonacoding/wx09wvqr1zzx"
+                      target="_blank"
+                      class="block w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all text-center"
+                    >
+                      Beli source code
+                    </a>
+                    <a
+                      href="https://github.com/PesonaCoding"
+                      target="_blank"
+                      class="block w-full mt-4 py-3 bg-white dark:bg-gray-900 text-gray-800 dark:text-white font-medium rounded-lg border border-gray-300 dark:border-gray-700 shadow hover:shadow-md transition-all text-center"
+                    >
+                      Source code gratis
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Screenshots -->
+    <section class="py-20 px-6">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+          Galeri
+          <span class="text-primary-600 dark:text-primary-400">Screenshot</span>
+        </h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 image-gallery"
+        >
+          <!-- Screenshot 1 -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              class="w-full h-full"
+              src="galeri-projek/login-app.png"
+              alt="login-app"
+            />
+          </div>
+
+          <!-- Screenshot 2 -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              class="w-full h-full"
+              src="galeri-projek/register-app.png"
+              alt="register-app"
+            />
+          </div>
+
+          <!-- Screenshot 3 -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              class="w-full h-full"
+              src="galeri-projek/wellcome.png"
+              alt="wellcome"
+            />
+          </div>
+
+          <!-- Screenshot 4 -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              class="w-full h-full"
+              src="galeri-projek/dasboard-admin.png"
+              alt="dasboard-admin"
+            />
+          </div>
+
+          <!-- Screenshot 5 -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              class="w-full h-full"
+              src="galeri-projek/syarat-ketentuan.png"
+              alt="syarat-ketentuan"
+            />
+          </div>
+
+          <!-- Screenshot 6 -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              class="w-full h-full"
+              src="galeri-projek/kebijakan-privasi.png"
+              alt="kebijakan-privasi"
+            />
+          </div>
+
+          <!-- Screenshot 7 -->
+          <div class="rounded-xl overflow-hidden shadow-lg md:col-start-2">
+            <img
+              class="w-full h-full"
+              src="galeri-projek/reset-password.png"
+              alt="reset-password"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center shadow-lg transform transition-transform duration-300 scale-0 hover:bg-primary-700"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+      // Theme Toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      const htmlElement = document.documentElement;
+
+      // Check for saved theme
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!localStorage.getItem("theme") &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        htmlElement.classList.add("dark");
+      } else {
+        htmlElement.classList.remove("dark");
+      }
+
+      // Toggle theme function
+      themeToggle.addEventListener("click", function () {
+        if (htmlElement.classList.contains("dark")) {
+          htmlElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          htmlElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      });
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Back to top button
+      const backToTopButton = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          backToTopButton.classList.replace("scale-0", "scale-100");
+        } else {
+          backToTopButton.classList.replace("scale-100", "scale-0");
+        }
+      });
+
+      backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
